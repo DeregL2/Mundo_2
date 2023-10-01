@@ -10,3 +10,4 @@ print('{} X {:2} = {}'.format(num,7,num*7))
 print('{} X {:2} = {}'.format(num,8,num*8))
 print('{} X {:2} = {}'.format(num,9,num*9))
 print('{} X {:2} = {}'.format(num,10,num*10))
+
