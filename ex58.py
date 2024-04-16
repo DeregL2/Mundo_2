@@ -2,21 +2,36 @@
 
 from random import randint
 from time import sleep
-computador = randint (0,10)
+
+computador = randint(0, 10)
 tentativas = 1
 
-print('-=-'*20)
-print('Eu sou o cumputador e pensei em um número, será que voce consegue adivinhar? ')
-print('-=-'*20)
-sleep(0.5)
-numero = int(input('Digite um número para adivinhar: '))
-print('-=-'*20)
-print('PROCESSANDO')
+print('-=-' * 20)
+print('Eu sou o computador e pensei em um número de 0 a 10.')
+print('Tente adivinhar qual é!')
+print('-=-' * 20)
 sleep(0.5)
 
-while computador != numero:
-        print('GANHEI!Você não acertou HAHA!')
-        numero = int(input('Tente novamente adivinha o número: '))
+while True:
+        # Solicita ao jogador que insira um número
+        numero = int(input('Digite um número entre 0 e 10: '))
+        print('PROCESSANDO...')
+        sleep(0.5)
+
+        # Verifica se o número digitado é igual ao número escolhido pelo computador
+        if numero == computador:
+                break  # Sai do loop se o jogador acertar
+
+        # Se o número for diferente, o computador dá uma dica
+        if numero < computador:
+                print('O número que pensei é maior...')
+        else:
+                print('O número que pensei é menor...')
+
         tentativas += 1
 
-print('Parabéns você acertou o número, você é incrível! e só precidou de {} tentativas '.format(tentativas))
+# Quando o jogador acerta, exibe uma mensagem de parabéns
+print('-=-' * 20)
+print('Parabéns! Você acertou o número em {} tentativas.'.format(tentativas))
+print('-=-' * 20)
+

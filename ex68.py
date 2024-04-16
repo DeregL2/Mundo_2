@@ -31,3 +31,4 @@ while True:  # Loop infinito para continuar o jogo até que o jogador decida par
             break  # Sai do loop
 
 print(f'VOCE GANHOU UM TOTAL DE {cont}x')  # Exibe o total de vitórias do jogador
+

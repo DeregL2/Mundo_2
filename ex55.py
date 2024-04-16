@@ -1,16 +1,20 @@
 #Faça um programa que leia o peso de cinco pessoas. No final , mostre qual foi o maior e o menor peso lidos.
 
-maior = 0
-menor = 0
-for i in range(1,6):
-    peso = float(input('Escreva o peso da {} pessoa: '.format(i)))
-    if i == 1:
+# Inicializa as variáveis maior e menor com o primeiro peso informado
+peso = float(input('Escreva o peso da 1ª pessoa: '))
+maior = peso
+menor = peso
+
+# Loop for que itera sobre as cinco pessoas
+for i in range(2, 6):
+    peso = float(input('Escreva o peso da {}ª pessoa: '.format(i)))
+
+    # Verifica se o peso atual é o maior ou o menor
+    if peso > maior:
         maior = peso
+    elif peso < menor:
         menor = peso
-    else:
-        if peso > maior:
-            maior = peso
-        if peso < menor:
-            menor = peso
-print('O maior peso lido foi {}Kg'.format(maior))
-print('O menor peso lido foi {}Kg'.format(menor))
+
+# Exibe o maior e o menor peso lidos
+print('O maior peso lido foi {} kg'.format(maior))
+print('O menor peso lido foi {} kg'.format(menor))
